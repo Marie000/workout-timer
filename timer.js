@@ -67,6 +67,14 @@ var Timer = {
     clearInterval(this.timerInterval);
     document.getElementById('startButton').disabled=false;
   },
+  resetTimer:function(){
+    clearInterval(this.timerInterval);
+    this.currentSeconds=0;
+    this.currentMinutes=0;
+    this.refreshDisplay(0,0);
+    document.getElementById('startButton').disabled=false;
+
+  }
 };
 
 Timer.refreshDisplay(Timer.currentMinutes, Timer.currentSeconds);
