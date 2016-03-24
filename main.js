@@ -147,17 +147,15 @@ var Workout = {
   },
   setDifficulty:function(difficulty){
     this.difficulty=difficulty;
-    if(difficulty==='easy'){
-      for(var i=0;i<this.workoutIntervals.length;i++){
-        this.workoutIntervals[i]--;
-        console.log(this.workoutIntervals)
-      }
-    }
-    if(difficulty==='hard'){
-      for(var i=0;i<this.workoutIntervals.length;i++){
-        this.workoutIntervals[i]++;
-        console.log(this.workoutIntervals)
-      }
+    switch(difficulty){
+      case 'easy':
+        document.getElementById('message').innerHTML="Start your workout at level 2";
+        break;
+      case 'medium':
+        document.getElementById('message').innerHTML="Start your workout at level 3";
+        break;
+      case 'hard':
+        document.getElementById('message').innerHTML="Start your workout at level 4";
     }
   },
   displayType:function(type){
@@ -188,7 +186,9 @@ var Alarm = {
         }
       },250);
   },
+  bell: new Audio('./sound/Bike-ring-bell.mp3'),
   displayMessage:function(number){
+        Alarm.bell.play();
         if(number===0){
               document.getElementById('message').innerHTML="Your workout is over.\n Well done!";
               this.blink();
@@ -196,7 +196,11 @@ var Alarm = {
         } else {
         if(number<Workout.workoutIntervals.length){
         var nextLevel = Workout.workoutIntervals[number];
-
+          if(Workout.difficulty==='easy'){
+            nextLevel--;
+          } else if (Workout.difficulty==='hard'){
+            nextLevel++;
+          }
           if(Workout.workoutIntervals[number]===Workout.workoutIntervals[number-1]){
             document.getElementById('message').innerHTML="Keep your level at "+nextLevel;
             this.blink();
