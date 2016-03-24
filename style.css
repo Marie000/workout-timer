@@ -1,6 +1,7 @@
 body{
     font-family: 'Cutive Mono';
     text-align:center;
+    background-color:#dddfd4;
 }
 #goal{
   font-size:25px;
@@ -10,26 +11,45 @@ body{
 }
 #message{
   font-size:30px;
-  background-color:black;
-  color:white;
+  background-color:#fae596;
+  color:black;
   margin:20px 40px;
   padding:20px;
   border-radius:5px;
-  outline: 3px dashed white;
+  outline: 3px dashed #dddfd4;
   outline-offset:-7px;
 }
 a:hover,a:visited,a:active,a:link{
   text-decoration:none;
+  color:#173c43;
+}
+.btn{
+  margin:5px;
+}
+.btn:hover,.btn:visited,.btn:active{
+  background-color:#3fb0ac ;
+  background-image:none;
+  color:#173c43;
 }
 
 #timer{
   text-align:center;
-  padding:20px 0 20px 0;
+  padding:10px;
+  margin:10px 140px;
   font-size:50px;
+  background-color:#3fb0ac;
+  border-radius:5px;
 }
 #timerSection{
   text-align:center;
 }
 #type{
   font-size:25px;
+}
+.panel-body{
+  background-color:#dddfd4;
+}
+.panel-default .panel-heading{
+  background-color:#3fb0ac;
+  background-image:none;
 }
