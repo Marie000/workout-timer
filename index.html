@@ -16,7 +16,7 @@
 <div class="panel-group" id="accordion">
   <div class="panel panel-default" id="workout">
   	<div class="panel-heading">
-  		<h2>Workout Settings <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" style='float:right'></span>
+  		<h2>Workout Settings <a onclick="changeIcon()" data-toggle="collapse" data-parent="#accordion" href="#collapse1"><span id="icon" class="glyphicon glyphicon-chevron-up" aria-hidden="true" style='float:right'></span>
     	</a></h2>
     </div>
 
@@ -25,68 +25,67 @@
 
 
       	<h3>Choose your workout goal:</h3>
+      	<div class="radio" id="setGoal">
   		<div class="row" >
 
-    		<div class="col-xs-4">
-      			<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(10)">10 minutes</button>
+    		<div class="col-xs-6 col-sm-4">
+  					<label><input type="radio" name="setGoal" checked="true" onclick="Workout.setGoal(10)">10 minutes</label>
     		</div>
-        	<div class="col-xs-4">
-                <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(15)">15 minutes</button>
+        	<div class="col-xs-6 col-sm-4">
+  					<label><input type="radio" name="setGoal" onclick="Workout.setGoal(15)">15 minutes</label>
     		</div>
-        	<div class="col-xs-4">
-               <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(20)">20 minutes</button>
+        	<div class="col-xs-6 col-sm-4">
+  					<label><input type="radio" name="setGoal" onclick="Workout.setGoal(20)">20 minutes</label>
     		</div>
-  		</div>
-  	<div class="row">
-    	<div class="col-xs-4">
-            <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(25)">25 minutes</button>
+  
+    	<div class="col-xs-6 col-sm-4">
+  					<label><input type="radio" name="setGoal" onclick="Workout.setGoal(25)">25 minutes</label>
     	</div>
-        <div class="col-xs-4">
-                <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(30)">30 minutes</button>
+        <div class="col-xs-6 col-sm-4">
+  					<label><input type="radio" name="setGoal" onclick="Workout.setGoal(30)">30 minutes</label>
     	</div>
-        <div class="col-xs-4">
-                <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(40)">40 minutes</button>
+        <div class="col-xs-6 col-sm-4">
+  					<label><input type="radio" name="setGoal" onclick="Workout.setGoal(40)">40 minutes</label>
     	</div>
   	</div>
-
+</div>
 
  
   			<h3>
     		Choose your workout type:</h3>
+    		<div class="radio" id="setType">
     		<div class="row">
-    			<div class="col-xs-4">
-      				<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('long distance')">long distance</button>
+    			<div class="col-xs-6 col-sm-4">
+  					<label><input type="radio" name="setWorkout" onclick="Workout.setType('long distance')">long distance</label>    				
 			    </div>
-        			<div class="col-xs-4">
-                		<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('uphill')">uphill</button>
+        			<div class="col-xs-6 col-sm-4">
+                		<label><input type="radio" name="setWorkout" onclick="Workout.setType('uphill')">uphill</label>   
     				</div>
-        			<div class="col-xs-4">
-               			<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('climb')">climb</button>
+        			<div class="col-xs-6 col-sm-4">
+               			<label><input type="radio" name="setWorkout" onclick="Workout.setType('climb')">climb</label>   
     				</div>
-  				</div>
-  			<div class="row">
-    			<div class="col-xs-4">
-            		<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('intervals')">intervals</button>
+    			<div class="col-xs-6 col-sm-4">
+            		<label><input type="radio" name="setWorkout" onclick="Workout.setType('intervals')">intervals</label>   
     			</div>
-        		<div class="col-xs-4">
-                	<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('random')">random</button>
+        		<div class="col-xs-6 col-sm-4">
+                	<label><input type="radio" name="setWorkout" onclick="Workout.setType('random')">random</label>   
 			    </div>
-        		<div class="col-xs-4">
-                	<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('manual')">manual</button>
+        		<div class="col-xs-6 col-sm-4">
     			</div>
-  			</div>
+  			</div></div>
   			<h3>Choose your difficulty</h3>
+  			<div class="radio" id="setDifficulty">
   			<div class="row">
-				<div class="col-xs-4">
-					<button class="btn btn-lg btn-default difficulty" onclick="Workout.setDifficulty('easy')">easy</button>
+				<div class="col-xs-6 col-sm-4">
+					 <label><input type="radio" name="setDifficulty" onclick="Workout.setDifficulty('easy')">easy</label>   
 				</div>
-				<div class="col-xs-4">
-					<button class="btn btn-lg btn-default difficulty" onclick="Workout.setDifficulty('medium')">medium</button>
+				<div class="col-xs-6 col-sm-4">
+					 <label><input type="radio" name="setDifficulty" checked="true" onclick="Workout.setDifficulty('medium')">medium</label>  
 				</div>
-				<div class="col-xs-4">
-					<button class="btn btn-lg btn-default difficulty" onclick="Workout.setDifficulty('hard')">hard</button>
+				<div class="col-xs-6 col-sm-4">
+					 <label><input type="radio" name="setDifficulty" onclick="Workout.setDifficulty('hard')">hard</label>  
 				</div>				
-  			</div>
+  			</div></div>
     </div><!--panel-body-->
 </div><!--panel-collapse-->
 </div><!--panel-->

@@ -1,5 +1,5 @@
 var Workout = {
-  totalTime:0,
+  totalTime:document.getElementById('setGoal').value,
   sectionTime:0,
   numOfIntervals:0,
   setSectionTime:function(time){

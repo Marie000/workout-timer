@@ -53,3 +53,21 @@ a:hover,a:visited,a:active,a:link{
   background-color:#3fb0ac;
   background-image:none;
 }
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+label{
+  font-size:20px;
+  padding:20px 0;
+}
+h3{
+  font-weight:bold;
+}
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+}
+.radio{
+  text-align:left;
+  padding:0 30px;
+}

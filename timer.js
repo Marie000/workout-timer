@@ -79,3 +79,10 @@ var Timer = {
 
 Timer.refreshDisplay(Timer.currentMinutes, Timer.currentSeconds);
 
+var changeIcon=function(){
+  if(document.getElementById('icon').className==="glyphicon glyphicon-chevron-up"){
+    document.getElementById('icon').className="glyphicon glyphicon-chevron-down";
+  } else {
+    document.getElementById('icon').className="glyphicon glyphicon-chevron-up";
+  }
+};
