@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<link rel="stylesheet" href="./style.css">
+
+<title>Workout Timer</title>
+</head>
+
+<body>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default" id="workout">
+  	<div class="panel-heading">
+  		<h2><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+    	Workout Settings:</a></h2>
+    </div>
+
+    <div id="collapse1" class="panel-collapse collapse in" data-toggle="button">
+      <div class="panel-body">
+
+
+      	<h3>Choose your workout goal:</h3>
+  		<div class="row" >
+
+    		<div class="col-xs-4">
+      			<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(10)">10 minutes</button>
+    		</div>
+        	<div class="col-xs-4">
+                <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(15)">15 minutes</button>
+    		</div>
+        	<div class="col-xs-4">
+               <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(20)">20 minutes</button>
+    		</div>
+  		</div>
+  	<div class="row">
+    	<div class="col-xs-4">
+            <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(25)">25 minutes</button>
+    	</div>
+        <div class="col-xs-4">
+                <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(30)">30 minutes</button>
+    	</div>
+        <div class="col-xs-4">
+                <button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setGoal(40)">40 minutes</button>
+    	</div>
+  	</div>
+
+
+ 
+  			<h3>
+    		Choose your workout type:</h3>
+    		<div class="row">
+    			<div class="col-xs-4">
+      				<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('long distance')">long distance</button>
+			    </div>
+        			<div class="col-xs-4">
+                		<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('uphill')">uphill</button>
+    				</div>
+        			<div class="col-xs-4">
+               			<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('climb')">climb</button>
+    				</div>
+  				</div>
+  			<div class="row">
+    			<div class="col-xs-4">
+            		<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('intervals')">intervals</button>
+    			</div>
+        		<div class="col-xs-4">
+                	<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('random')">random</button>
+			    </div>
+        		<div class="col-xs-4">
+                	<button class="btn btn-lg btn-default workoutChoice" onclick="Workout.setType('manual')">manual</button>
+    			</div>
+  			</div>
+  			<h3>Choose your difficulty</h3>
+  			<div class="row">
+				<div class="col-xs-4">
+					<button class="btn btn-lg btn-default difficulty" onclick="Workout.setDifficulty('easy')">easy</button>
+				</div>
+				<div class="col-xs-4">
+					<button class="btn btn-lg btn-default difficulty" onclick="Workout.setDifficulty('medium')">medium</button>
+				</div>
+				<div class="col-xs-4">
+					<button class="btn btn-lg btn-default difficulty" onclick="Workout.setDifficulty('hard')">hard</button>
+				</div>				
+  			</div>
+    </div><!--panel-body-->
+</div><!--panel-collapse-->
+</div><!--panel-->
+</div><!--panel-group-->
+<div id="message">Start your workout!</div>
+
+<div id="timerSection">
+	<span id="timer"></span>
+	  	<button onclick="Timer.reverseTimer()" class="btn btn-default">Change time display</button>
+<div>
+	<button onclick="Timer.startTimer()" id="startButton" class="btn btn-default">Start</button>
+	<button onclick="Timer.pauseTimer()" id="pauseButton" class="btn btn-">Pause</button>
+</div></div>
+
+<h3>Your Goal:</h3><span id="goal"></span>
+<h3>Your chosen workout:</h3>
+
+<div id="type"></div>
+
+
+
+
+     <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="./main.js"></script>
+	</body>
