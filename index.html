@@ -24,7 +24,7 @@
       <div class="panel-body">
 
 
-      	<h3>Choose your workout goal:</h3>
+      	<h3>Choose your workout goal</h3>
       	<div class="radio" id="setGoal">
   		<div class="row" >
 
@@ -52,23 +52,38 @@
 
  
   			<h3>
-    		Choose your workout type:</h3>
+    		Choose your workout type</h3>
     		<div class="radio" id="setType">
     		<div class="row">
     			<div class="col-xs-6 col-sm-4">
-  					<label><input type="radio" name="setWorkout" onclick="Workout.setType('long distance')">long distance</label>    				
+  					<label><input type="radio" name="setWorkout" onclick="Workout.setType('long distance')">long distance</label>  
+            <span class="glyphicon glyphicon-info-sign infoIcon" id="distanceIcon">
+            <span id="distanceInfo" class="infoText">Constant medium-level difficulty, preceded and followed by a warmup and cooldown
+            </span>  				
 			    </div>
         			<div class="col-xs-6 col-sm-4">
                 		<label><input type="radio" name="setWorkout" onclick="Workout.setType('uphill')">uphill</label>   
+            <span class="glyphicon glyphicon-info-sign infoIcon" id="uphillIcon">
+            <span id="uphillInfo" class="infoText">Constant increase in difficulty, followed by a cooldown.
+            </span>                      
     				</div>
         			<div class="col-xs-6 col-sm-4">
                			<label><input type="radio" name="setWorkout" onclick="Workout.setType('climb')">climb</label>   
+            <span class="glyphicon glyphicon-info-sign infoIcon" id="climbIcon">
+            <span id="climbInfo" class="infoText">Gradual increase in difficulty followed by a gradual decrease. 
+            </span>  
     				</div>
     			<div class="col-xs-6 col-sm-4">
             		<label><input type="radio" name="setWorkout" onclick="Workout.setType('intervals')">intervals</label>   
+            <span class="glyphicon glyphicon-info-sign infoIcon" id="intervalsIcon">
+            <span id="intervalsInfo" class="infoText">Alternating between low and high levels of difficulty. 
+            </span>  
     			</div>
         		<div class="col-xs-6 col-sm-4">
                 	<label><input type="radio" name="setWorkout" onclick="Workout.setType('random')">random</label>   
+            <span class="glyphicon glyphicon-info-sign infoIcon" id="randomIcon">
+            <span id="randomInfo" class="infoText">Randomly chosen levels of difficulty. 
+            </span>  
 			    </div>
         		<div class="col-xs-6 col-sm-4">
     			</div>
@@ -93,14 +108,14 @@
 </div><!--settings-->
 <div class="main">
 
-<div id="message">Start your workout!</div>
+<div id="message">Start your workout at level 3</div>
 
 <div id="timerSection">
-	<div id="timer"></div>
-	  	<button onclick="Timer.reverseTimer()" id="reverseTimer" class="btn btn-lg btn-default">Countdown</button>
+	<span id="timer"></span>
+	  	<button onclick="Timer.reverseTimer()" id="reverseTimer" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
 <div>
-	<button onclick="Timer.startTimer()" id="startButton" class="btn btn-lg btn-default">Start</button>
-	<button onclick="Timer.pauseTimer()" id="pauseButton" class="btn btn-lg btn-default">Pause</button>
+	<button onclick="Timer.startTimer()" id="startButton" class="btn btn-lg btn-default">start</button>
+	<button onclick="Timer.pauseTimer()" id="pauseButton" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-pause"></span></button>
 </div>
 	<button onclick="Timer.resetTimer()" id="resetButton" class="btn btn-default">Reset Timer</button>
 

@@ -5,11 +5,9 @@ var Timer = {
   reverseTimer:function(){
     if(this.timerSetting==='up' && Workout.totalTime>0){
       this.timerSetting='down';
-      document.getElementById('reverseTimer').innerHTML="count up";
     }
     else {
       this.timerSetting='up';
-      document.getElementById('reverseTimer').innerHTML="countdown";
     }
   },
   adjustDisplay:function(input){
@@ -28,7 +26,7 @@ var Timer = {
       } else {
         return (this.adjustDisplay(Workout.totalTime-minutes-1))+":"+(this.adjustDisplay(60-seconds));
       }
-    } 
+    }
   },
   refreshDisplay: function(minutes, seconds) {
     document.getElementById('timer').innerHTML = Timer.displayTimer(minutes,seconds);
@@ -39,10 +37,10 @@ var Timer = {
     for(var i=1;i<10;i++){
     if(minutes===Workout.sectionTime*i && seconds===0){
        Alarm.displayMessage(i);
-      } 
+      }
     else if(minutes===Workout.totalTime && seconds===0){
-      Alarm.displayMessage(0)
-    }     
+      Alarm.displayMessage(0);
+    }
     }
 
   },
@@ -73,7 +71,7 @@ var Timer = {
     this.currentMinutes=0;
     this.refreshDisplay(0,0);
     document.getElementById('startButton').disabled=false;
-
+    Workout.setDifficulty(Workout.difficulty);
   }
 };
 

@@ -1,7 +1,7 @@
 var Workout = {
-  totalTime:document.getElementById('setGoal').value,
-  sectionTime:0,
-  numOfIntervals:0,
+  totalTime:10,
+  sectionTime:2,
+  numOfIntervals:5,
   setSectionTime:function(time){
       switch(time){
         case 10:
@@ -89,6 +89,5 @@ var Workout = {
     document.getElementById('type').innerHTML= type;
   },
 };
-Workout.displayGoal(0);
+Workout.displayGoal(10);
 Workout.displayType("none chosen");
-

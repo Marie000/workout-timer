@@ -35,13 +35,13 @@ a:hover,a:visited,a:active,a:link{
 #timer{
   text-align:center;
   padding:10px;
-  margin:10px 140px;
   font-size:50px;
   background-color:#3fb0ac;
   border-radius:5px;
 }
 #timerSection{
   text-align:center;
+    margin:10px 140px;
 }
 #type{
   font-size:25px;
@@ -70,4 +70,35 @@ input[type="radio"]{
 .radio{
   text-align:left;
   padding:0 30px;
+}
+.infoIcon{
+  position:relative;
+}
+.infoText {
+  visibility:hidden;
+  position:absolute;
+  z-index:1;
+  width:50px;
+  top:-25px;
+  left:105%;
+  width:200px;
+  padding: 10px 5px 10px 10px;
+  border-radius:5px;
+  background:#3fb0ac;
+  font-family:'Cutive Mono';
+}
+#intervalsIcon:hover #intervalsInfo{
+ visibility:visible;
+}
+#distanceIcon:hover #distanceInfo{
+  visibility:visible;
+}
+#uphillIcon:hover #uphillInfo{
+  visibility: visible;
+}
+#climbIcon:hover #climbInfo{
+  visibility: visible;
+}
+#randomIcon:hover #randomInfo {
+  visibility:visible;
 }
