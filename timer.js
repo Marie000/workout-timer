@@ -59,7 +59,7 @@ var Timer = {
       }
       refreshDisplay(currentMinutes, currentSeconds);
       checkTime(currentMinutes,currentSeconds);
-    }, 100);
+    }, 10);
   },
   pauseTimer:function(){
     clearInterval(this.timerInterval);

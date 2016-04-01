@@ -102,3 +102,6 @@ input[type="radio"]{
 #randomIcon:hover #randomInfo {
   visibility:visible;
 }
+#modalButton{
+  display:none;
+}

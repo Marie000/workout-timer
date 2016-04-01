@@ -8,6 +8,8 @@
 
 <link rel="stylesheet" href="./style.css">
 
+<script type="text/javascript" src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+
 <title>Workout Timer</title>
 </head>
 
@@ -108,7 +110,40 @@
 </div><!--settings-->
 <div class="main">
 
-<div id="message">Start your workout at level 3</div>
+<!--modal-->
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Keep track of your progress</h4>
+      </div>
+      <div class="modal-body">
+        <p>Your total time:<span id="resultTime"></span></p>
+        <p>Your difficulty level:<span id="resultDifficulty"></span></p>
+        <p>Your workout type:<span id="resultType"></span></p>
+        <p>Number of calories burned: <input type="text" name="resultCalories" /></p>
+        <p>Distance: <input type="text" name="resultDistance" /></p>
+        <button class="btn btn-default" onclick="UserData.saveData()">Save data</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--end of Modal-->
+
+<div id="message">Start your workout at level 3
+
+</div>
+
+<button type="button" id="modalButton" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
 <div id="timerSection">
 	<span id="timer"></span>
@@ -129,11 +164,14 @@
 
 </div><!---main-->
 
+
      <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <script src="./timer.js"></script>
     <script src="./workout.js"></script>
+    <script src="./userData.js"></script>
     <script src="./alarm.js"></script>
+    
 
 	</body>
