@@ -25,6 +25,7 @@ a:hover,a:visited,a:active,a:link{
 }
 .btn{
   margin:5px;
+  text-shadow:none;
 }
 .btn:hover,.btn:visited,.btn:active{
   background-color:#3fb0ac ;
@@ -104,4 +105,7 @@ input[type="radio"]{
 }
 #modalButton{
   display:none;
+}
+#modalButtonSection{
+  text-align:center;
 }

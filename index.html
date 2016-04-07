@@ -121,13 +121,18 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Keep track of your progress</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="modal-body">
+        <p>Date:<span id="date"></span></p>
         <p>Your total time:<span id="resultTime"></span></p>
         <p>Your difficulty level:<span id="resultDifficulty"></span></p>
         <p>Your workout type:<span id="resultType"></span></p>
-        <p>Number of calories burned: <input type="text" name="resultCalories" /></p>
-        <p>Distance: <input type="text" name="resultDistance" /></p>
-        <button class="btn btn-default" onclick="UserData.saveData()">Save data</button>
+        <p>Number of calories burned: <span id="caloriesSection"><input type="text" name="resultCalories" id="caloriesInput" />
+        <button class="btn btn-default" onClick="UserData.submitCalories()">Submit</button></span>
+        </p>
+        <p>Distance: <span id="distanceSection"><input type="text" name="resultDistance" id="distanceInput"/>
+        <button class="btn btn-default" onClick="UserData.submitDistance()">Submit</button></span>
+        </p>
+        <button class="btn btn-default" onclick="UserData.submitToDatabase()">Save data</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -142,8 +147,9 @@
 <div id="message">Start your workout at level 3
 
 </div>
-
-<button type="button" id="modalButton" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div id="modalButtonSection">
+<button type="button" id="modalButton" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Save your workout results</button>
+</div>
 
 <div id="timerSection">
 	<span id="timer"></span>
