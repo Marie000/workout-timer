@@ -3,7 +3,7 @@ var Alarm = {
     var count=0;
     var color="white";
       this.blinkInterval = setInterval(function(){
-        if (count===19){
+        if (count===20){
           clearInterval(this.blinkInterval);
         } else {
             if(color==="white"){

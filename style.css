@@ -1,7 +1,7 @@
 body{
     font-family: 'Cutive Mono';
     text-align:center;
-    background-color:#dddfd4;
+    background-color:#efefef;
 }
 #goal{
   font-size:25px;
@@ -11,33 +11,33 @@ body{
 }
 #message{
   font-size:30px;
-  background-color:#fae596;
-  color:black;
+  background-color:#ff3b3f;
+  color:#efefef;
   margin:20px 40px;
   padding:20px;
   border-radius:5px;
-  outline: 3px dashed #dddfd4;
+  outline: 3px dashed #efefef;
   outline-offset:-7px;
 }
 a:hover,a:visited,a:active,a:link{
   text-decoration:none;
-  color:#173c43;
+  color:#a9a9a9;
 }
 .btn{
   margin:5px;
   text-shadow:none;
 }
 .btn:hover,.btn:visited,.btn:active{
-  background-color:#3fb0ac ;
+  background-color:#caebf2 ;
   background-image:none;
-  color:#173c43;
+  color:#a9a9a9;
 }
 
 #timer{
   text-align:center;
   padding:10px;
   font-size:50px;
-  background-color:#3fb0ac;
+  background-color:#caebf2;
   border-radius:5px;
 }
 #timerSection{
@@ -48,10 +48,10 @@ a:hover,a:visited,a:active,a:link{
   font-size:25px;
 }
 .panel-body{
-  background-color:#dddfd4;
+  background-color:#efefef;
 }
 .panel-default .panel-heading{
-  background-color:#3fb0ac;
+  background-color:#caebf2;
   background-image:none;
 }
 .btn:focus,.btn:active {
@@ -85,7 +85,7 @@ input[type="radio"]{
   width:200px;
   padding: 10px 5px 10px 10px;
   border-radius:5px;
-  background:#3fb0ac;
+  background:#caebf2;
   font-family:'Cutive Mono';
 }
 #intervalsIcon:hover #intervalsInfo{
