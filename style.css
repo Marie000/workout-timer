@@ -80,16 +80,10 @@ h3{
 input[type="radio"]{
     width: 20px;
     height: 20px;
-    opacity: 0;
-    position:absolute;
+
 }
 
-input[type='radio'],label {
-      display: inline-block;
-    vertical-align: middle;
-    margin: 5px;
-    cursor: pointer;
-  }
+
 
 label {
   position:relative;

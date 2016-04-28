@@ -82,7 +82,7 @@ var Timer = {
 
 Timer.refreshDisplay(Timer.currentMinutes, Timer.currentSeconds);
 
-//unrelated to the Timer file (just not sure where to put it)
+//unrelated to the Timer file (just not sure where else to put it)
 var changeIcon=function(){
   if(document.getElementById('icon').className==="glyphicon glyphicon-chevron-up"){
     document.getElementById('icon').className="glyphicon glyphicon-chevron-down";
