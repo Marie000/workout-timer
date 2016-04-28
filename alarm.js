@@ -1,3 +1,5 @@
+//sounds, messages to indicate a new interval or the end of the workout.
+
 var Alarm = {
   blink:function(){
     var count=0;
@@ -44,7 +46,6 @@ var Alarm = {
           document.getElementById('message').innerHTML="Your workout is over.\n Well done!";
           this.blink();
           Timer.pauseTimer();
-          console.log(UserData.users);
           UserData.prompt();
         }
       }

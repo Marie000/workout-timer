@@ -1,3 +1,6 @@
+//timer display and basic functionning 
+
+
 var Timer = {
   currentMinutes: 0,
   currentSeconds: 0,
@@ -17,10 +20,11 @@ var Timer = {
       return input.toString();
     }
   },
+  //returns time - but does not display it (that is done by refreshDisplay) - who names these functions?
   displayTimer: function(minutes, seconds) {
     if(this.timerSetting==='up'){
     return Timer.adjustDisplay(minutes) + ":" + Timer.adjustDisplay(seconds);
-    } else {
+    } else { //reversed (countdown)
       if(seconds===0){
         return (this.adjustDisplay(Workout.totalTime-minutes))+":00";
       } else {
@@ -33,6 +37,7 @@ var Timer = {
     Timer.currentMinutes=minutes;
     Timer.currentSeconds=seconds;
   },
+  //check if it is time to sound an alarm.
   checkTime:function(minutes,seconds){
     for(var i=1;i<10;i++){
     if(minutes===Workout.sectionTime*i && seconds===0){
@@ -77,6 +82,7 @@ var Timer = {
 
 Timer.refreshDisplay(Timer.currentMinutes, Timer.currentSeconds);
 
+//unrelated to the Timer file (just not sure where to put it)
 var changeIcon=function(){
   if(document.getElementById('icon').className==="glyphicon glyphicon-chevron-up"){
     document.getElementById('icon').className="glyphicon glyphicon-chevron-down";

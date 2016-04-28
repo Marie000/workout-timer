@@ -1,3 +1,6 @@
+//workout data to be sent to a firebase database at the end of the workout.
+//this data is not currently used for anything
+
 var UserData = {
 	users:["marie","maurice"],
 	currentUser:'',

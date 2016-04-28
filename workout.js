@@ -1,7 +1,11 @@
+//workout options (difficulty, type, total time)
+//default set to 10 minutes, medium difficulty.
+
 var Workout = {
   totalTime:10,
   sectionTime:2,
   numOfIntervals:5,
+  //set how many intervals and how much time for each intervals - e.g. 10 min workout: 5 2-minute intervals
   setSectionTime:function(time){
       switch(time){
         case 10:
@@ -24,7 +28,6 @@ var Workout = {
     this.totalTime=goal;
     this.displayGoal(goal);
     this.setSectionTime(goal);
-    console.log(this.sectionTime);
   },
   workoutType:"none chosen",
   workoutIntervals:[],
@@ -33,6 +36,9 @@ var Workout = {
     this.workoutType=type;
     this.displayType(type);
     switch(type){
+      //create workout intervals - based on a bike with difficulty levels from 1 to 8 
+      //this assumes a difficulty level of medium, and keeps the bike's difficulty between 3 and 7
+      //other difficulty levels adjusted when the number is displayed, in alarm.js
       case 'long distance':
         if(this.numOfIntervals===5){
           this.workoutIntervals=[3,5,5,5,3];
@@ -70,7 +76,6 @@ var Workout = {
         this.workoutIntervals.push(3);
         break;
     }
-    console.log(this.workoutIntervals);
   },
   setDifficulty:function(difficulty){
     this.difficulty=difficulty;
@@ -89,5 +94,6 @@ var Workout = {
     document.getElementById('type').innerHTML= type;
   },
 };
+
 Workout.displayGoal(10);
 Workout.displayType("none chosen");
